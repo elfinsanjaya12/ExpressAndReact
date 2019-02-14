@@ -1,9 +1,12 @@
 import React, { Component } from "react";
-import NavbarGama from "../components/organisms/NavbarGama";
 
 class Home extends Component {
   render() {
-    return <NavbarGama />;
+    return (
+      <div>
+        <h1>Welcome TO Home</h1>
+      </div>
+    );
   }
 }
 
