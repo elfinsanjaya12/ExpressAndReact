@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavbarGama from "./components/organisms/NavbarGama";
 import Home from "./pages/Home";
 import Produk from "./pages/produks";
+import User from "./pages/users";
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/produk" component={Produk} />
+              <Route exact path="/users" component={User} />
             </Switch>
           </div>
         </div>

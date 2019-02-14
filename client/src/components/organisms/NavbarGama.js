@@ -32,6 +32,11 @@ class NavbarGama extends Component {
                 Produks
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/users">
+                User
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

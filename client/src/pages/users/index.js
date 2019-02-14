@@ -3,19 +3,17 @@ import Table from "../../components/organisms/TableWithAction";
 import SearchInput from "../../components/organisms/SearchInput";
 import BreadCrumb from "../../components/organisms/BreadCrumb";
 
-class Produk extends Component {
+class User extends Component {
   render() {
     return (
       <div className="container">
-        <BreadCrumb secondText="Produk" />
+        <BreadCrumb secondText="User" />
         <SearchInput />
         <br />
-        <Table
-          thead={["No", "Produk", "Gambar", "Modal", "Harga", "Stok", "Aksi"]}
-        />
+        <Table thead={["No", "Nama", "Aksi"]} />
       </div>
     );
   }
 }
 
-export default Produk;
+export default User;
