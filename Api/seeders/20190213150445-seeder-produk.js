@@ -3,7 +3,7 @@ const faker = require("faker");
 module.exports = {
   up: (queryInterface, Sequelize) => {
     let produk = [];
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 1; i++) {
       produk.push({
         nama: faker.name.findName(),
         gambar:
@@ -15,10 +15,10 @@ module.exports = {
         updatedAt: new Date()
       });
     }
-    return queryInterface.bulkInsert("Produk", produk, {});
+    return queryInterface.bulkInsert("Produks", produk, {});
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete("Produk", null, {});
+    return queryInterface.bulkDelete("Produks", null, {});
   }
 };
