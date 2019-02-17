@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
-import NavbarGama from "./components/organisms/NavbarGama";
+import NavbarGama from "./components/organisms/AdminNavbar";
 import Home from "./pages/Home";
 import Produk from "./pages/produks";
 import User from "./pages/users";

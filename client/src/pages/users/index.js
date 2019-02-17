@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import Table from "../../components/organisms/TableWithAction";
-import SearchInput from "../../components/organisms/SearchInput";
-import BreadCrumb from "../../components/organisms/BreadCrumb";
-
+import { SearchInput } from "../../components/atoms/Input/index";
+import BreadCrumb from "../../components/atoms/BreadCrumb/BreadCrumb";
 class User extends Component {
   render() {
     return (

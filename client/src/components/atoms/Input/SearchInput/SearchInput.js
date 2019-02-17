@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchInput = props => {
+export const SearchInput = props => {
   // props dari pages yang menggunakan Search Input
   const { query, handleChange } = props;
   return (
@@ -16,5 +16,3 @@ const SearchInput = props => {
     </div>
   );
 };
-
-export default SearchInput;

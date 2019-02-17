@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Thead from "./Thead";
+import Thead from "../molecules/Thead";
 
 class TableWithAction extends Component {
   render() {
     const { thead } = this.props;
     return (
       <div className="table-responsive">
-        <table className="table table-sm">
+        <table className="table table-dark">
           <Thead text={thead} />
         </table>
       </div>

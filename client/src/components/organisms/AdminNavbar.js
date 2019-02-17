@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import Navigation from "../molecules/Navigation";
 
 class NavbarGama extends Component {
   render() {
@@ -21,23 +21,7 @@ class NavbarGama extends Component {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <Link className="nav-link" to="/">
-                Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/produk">
-                Produks
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/users">
-                User
-              </Link>
-            </li>
-          </ul>
+          <Navigation />
         </div>
       </nav>
     );
