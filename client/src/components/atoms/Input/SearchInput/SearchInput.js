@@ -2,7 +2,7 @@ import React from "react";
 
 export const SearchInput = props => {
   // props dari pages yang menggunakan Search Input
-  const { query, handleChange } = props;
+  const { query } = props;
   return (
     <div className="from-group">
       <input

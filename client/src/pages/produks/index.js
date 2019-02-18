@@ -1,8 +1,11 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import Table from "../../components/organisms/TableWithAction";
 import { SearchInput } from "../../components/atoms/Input/index";
 import BreadCrumb from "../../components/atoms/BreadCrumb/BreadCrumb";
-
+import { connect } from "react-redux";
+import { setAllProduks } from "../../store/actions";
+import { bindActionCreators } from "redux";
 class Produk extends Component {
   constructor() {
     super();
@@ -11,41 +14,46 @@ class Produk extends Component {
     };
   }
 
-  // componentDidMount() {
-  //   this.props.setAllProduks();
-  // }
+  componentDidMount() {
+    this.props.setAllProduks();
+  }
   render() {
-    // const { produks } = this.props;
+    const { produk } = this.props;
+    // console.log("Hello" + produks);
+    // console.log(this.props);
     return (
       <div className="container">
-        <div className="card shadow-sm p-3 mb-5 bg-white rounded">
-          <div className="card-body">
-            <BreadCrumb secondText="Produk" />
-            <SearchInput />
-            <br />
-            <Table
-              // data={produks}
-              thead={["Produk", "Gambar", "Modal", "Harga", "Stok", "Aksi"]}
-              tbody={["nama", "gambar"]}
-            />
-          </div>
-        </div>
+        <BreadCrumb secondText="Produk" />
+        <Link
+          className="btn btn-primary"
+          to="/kas/create"
+          style={{ marginBottom: 10 }}
+        >
+          <i className="fas fa-plus" /> Tambah
+        </Link>
+        <SearchInput />
+        <br />
+        <Table
+          data={produk}
+          thead={["Produk", "Gambar", "Modal", "Harga", "Stok", "Aksi"]}
+          tbody={["nama", "gambar", "modal", "harga", "stok"]}
+        />
       </div>
     );
   }
 }
 
-export default Produk;
-// const mapStateToProps = state => {
-//   return {
-//     produk: state.produk
-//   };
-// };
+// export default Produk;
+const mapStateToProps = state => {
+  return {
+    produk: state.produk
+  };
+};
 
-// const mapDispatchToProps = dispatch =>
-//   bindActionCreators({ setAllProduks }, dispatch);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ setAllProduks }, dispatch);
 
-// export default connect(
-//   mapStateToProps,
-//   mapDispatchToProps
-// )(Produk);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Produk);

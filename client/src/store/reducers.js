@@ -1,13 +1,13 @@
 import { SET_PRODUK } from "./actionTypes";
 const initialState = {
-  produks: []
+  produk: []
 };
 
 const reducer = (state = initialState, action) => {
   if (action.type === SET_PRODUK) {
     return {
       ...state,
-      produks: action.payload
+      produk: action.payload
     };
   }
   return state;
