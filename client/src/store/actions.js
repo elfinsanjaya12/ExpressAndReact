@@ -1,1 +1,19 @@
-export { setAllProduks } from "./axios/produk/setAllProduks";
+import { SET_PRODUK } from "./actionTypes";
+import axios from "../axios";
+
+export const setAllProduks = () => {
+	return (dispatch) => {
+		axios
+			.get(`product/all`)
+			.then((res) => {
+				const { data } = res.data;
+				dispatch({
+					type: SET_PRODUK,
+					payload: data
+				});
+			})
+			.catch((err) => {
+				console.log(err);
+			});
+	};
+};
